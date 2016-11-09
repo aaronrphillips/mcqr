@@ -1,0 +1,418 @@
+CONTROLLER: node005: trying to build 1 workers
+CONTROLLER: node005: trying to build worker 0
+CONTROLLER: node005: trying to start thread 0
+CONTROLLER: node005: started thread 0
+CONTROLLER: node005:  done building workers
+CONTROLLER: node005: Start()
+CONTROLLER: node005: connecting to DEALER using tcp
+CONTROLLER:node005-8860:node005, connecting to DEALER REQ:node003:
+CONTROLLER:node005-8860:node005, connected to DEALER REQ:node003:
+CONTROLLER:node005-8860:node005, connecting to DEALER PUSH:node003:
+CONTROLLER:node005-8860:node005, connected to DEALER PUSH:node003:
+CONTROLLER:node005, binding to PULL:node003:
+CONTROLLER:node005, bound to PULL:node003:
+CONTROLLER:node005, binding to REPLY:node003:
+CONTROLLER:node005, bound to REPLY:node003:
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:3
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 4.18098 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 10.1824 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 11.1838 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:5
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 6.02113 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 6.02234 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 11.0237 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 13.0251 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:9
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 2.01203 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 14.0135 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:12
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 5.18152 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 6.18295 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 10.1844 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:14
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 7.00781 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:17
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 3.01243 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 7.01383 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:20
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 6.01407 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:22
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 8.00994 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:25
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 3.01408 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 5.01541 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:28
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 6.01131 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 12.0127 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:31
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 9.00974 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 11.0112 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:34
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 4.01303 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 14.0145 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a PUSH from:node005:node005-0 uuid:37
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 7.01263 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: WARNING: node005 not ok to launch: (task wait not elapsed - 12.014 >= 15)
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: sending a message
+CONTROLLER:node005 waiting for worker socket
+CONTROLLER:node005 processing worker socket
+CONTROLLER: node005: got a REQUEST
+CONTROLLER: node005: got a REQUEST from:node005:node005-0 active?: 1
+CONTROLLER: node005: node005-8860, requesting seq from dealer
+CONTROLLER: node005: node005-8860, waiting for REP seq from dealer
+CONTROLLER: node005: node005-8860, received REP seq from dealer
+CONTROLLER: node005: has now received 1 kills (need 1 to exit)
+CONTROLLER: node005: sending a message
+CONTROLLER: node005: received all kills (1)
+CONTROLLER: node005: exiting

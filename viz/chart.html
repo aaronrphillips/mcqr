@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.domain {
+  display: none;
+}
+
+.grid .tick line{
+  stroke: lightgrey;
+  opacity: 0.7;
+}
+
+.grid path {
+  stroke-width: 0px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.taskline {
+  fill: none;
+  stroke: orange;
+  stroke-width: 1.5px;
+}
+
+.taskcutoffline {
+  fill: none;
+  stroke: orange;
+  stroke-width: 1px;
+}
+
+.node rect {
+  cursor: pointer;
+  fill: #fff;
+  fill-opacity: .5;
+  stroke: #3182bd;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+path.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
+
+.metadata-title {
+  font-size: large;
+  font-family: "helvetica";
+  font-weight:bold;
+}
+
+.metadata-text {
+  font: 12px sans-serif;
+}
+
+</style>
+<body>
+<button style="width:100px; height:30px;" onclick="toggle_all()">Toggle All Nodes</button>
+<br/>
+<div id="metadata-div" style="display: none; background-color:white; position:absolute; left:20px; top:20px; width:150px; height: 80; opacity: 0.7; ">
+<table>
+  <tr>
+    <td class="metadata-title">UUID</td>
+    <td id="uuid" class="metadata-text"></td>
+  </tr>
+  <tr>
+    <td class="metadata-title">Time</td>
+    <td id="time" class="metadata-text"></td>
+  </tr>
+  <tr>
+    <td class="metadata-title">Type</td>
+    <td id="type" class="metadata-text"></td>
+  </tr>
+</table>
+</div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var margin1 = {top: 20, right: 20, bottom: 30, left: 50},
+    width1 = 1600 - margin1.left - margin1.right,
+    height1 = 200 - margin1.top - margin1.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width1]);
+
+var y = d3.scale.linear()
+    .range([height1, 0]);
+
+var y2 = d3.scale.linear()
+    .range([height1, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .orient("left")
+    .scale(y)
+    .tickSize(-width1, 0, 0)
+    .ticks(7)
+;
+
+var yAxisRight = d3.svg.axis()
+    .orient("right")
+    .scale(y2)
+    .ticks(7)
+    .tickSize(0, 0, 0)
+;
+
+var line = d3.svg.line()
+    .x(function(d) { return x(d.x); })
+    .y(function(d) { return y(d.y); });
+
+var taskline = d3.svg.line()
+    .x(function(d) { return x(d.x); })
+    .y(function(d) { return y2(d.y2); });
+
+var taskcutoffline = d3.svg.line()
+    .x(function(d) { return x(d.x); })
+    .y(function(d) { return y2(d.y3); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", (width1 + margin1.left + margin1.right) + 300) // 300 to make room for text on the right
+    .attr("height", (height1 + margin1.top + margin1.bottom))
+  .append("g")
+    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+
+d3.tsv("flare.json.tsv", function(error, data) {
+  data.forEach(function(d) {
+    //d.date = +d.date;
+    d.x  = +d.x;
+    d.y  = +d.y;
+    d.y2 = +d.y2;
+    d.y3 = +d.y3;
+  });
+
+  x.domain(d3.extent(data, function(d) { return d.x; }));
+  y.domain(d3.extent(data, function(d) { return d.y; }));
+  y2.domain(d3.extent(data, function(d) { return d.y2; }));
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height1 + ")")
+      .call(xAxis);
+
+  svg.append("g")
+     .attr("class", "y axis")
+     .attr("class", "grid")
+     .attr("transform", "translate(" + width1 + ", 0)")
+     .call(yAxisRight);
+
+  var textg = svg.append("g")
+                 .attr("class", "y axis")
+                 .attr("class", "grid")
+                 .call(yAxis);
+  textg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .style("fill", "steelblue")
+      .text("# Active Cores");
+  textg.append("text")
+      .attr("transform", "rotate(-90) translate(0, " + (width1 - 40)+ ")")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .style("fill", "orange")
+      .style("margin-left", "15px")
+      .text("# Completed Tasks");
+
+  svg.append("path")
+      .datum(data)
+      .attr("class", "line")
+      .attr("d", line);
+
+  svg.append("path")
+      .datum(data)
+      .attr("class", "taskline")
+      .attr("d", taskline);
+
+  svg.append("path")
+      .datum(data)
+      .attr("class", "taskcutoffline")
+      .attr("stroke-dasharray", "10,10")
+      .attr("d", taskcutoffline);
+});
+
+</script>
+<script>
+function toggle_all()
+{
+  root.children.forEach(click);
+}
+
+  function collapse(d) {
+    if (d.children) {
+      d._children = d.children;
+      d._children.forEach(collapse);
+      d.children = null;
+    }
+  }
+
+var mouse_x = 0;
+var mouse_y = 0;
+
+function handleMouseMove(event) {
+    event = event || window.event; // IE-ism
+    // event.clientX and event.clientY contain the mouse position
+    mouse_x = event.pageX;
+    mouse_y = event.pageY;
+}
+
+window.onmousemove = handleMouseMove;
+
+
+var margin = {top: 30, right: 20, bottom: 30, left: 20},
+    //width = 960 - margin.left - margin.right,
+    width = 2000 - margin.left - margin.right,
+    barHeight = 20,
+    barWidth = width * .8;
+
+var i = 0,
+    duration = 400;
+
+var root;
+
+var tree = d3.layout.tree()
+    .nodeSize([0, 20]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var svg2;
+
+console.log("a");
+var max_proc;
+d3.json("flare.json", function(error, flare) {
+  flare.x0 = 0;
+  flare.y0 = 0;
+  root = flare;
+
+  //var height = Math.max(500, 200 * barHeight + margin.top + margin.bottom);
+  var total_nodes = 1; 
+
+  for (var node_idx in root.children)
+  {
+    total_nodes += root.children[node_idx].children.length + 1;
+  }
+
+  var height = Math.max(500, total_nodes * barHeight + margin.top + margin.bottom) + 500;
+
+   svg2 = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  root.children.forEach(collapse);
+  max_proc = root.max_time;
+  update(root);
+});
+
+
+
+
+function update(source) {
+
+  // Compute the flattened node list. TODO use d3.layout.hierarchy.
+  var nodes = tree.nodes(root);
+
+  var height = Math.max(500, nodes.length * barHeight + margin.top + margin.bottom) + 500;
+
+/*
+  svg2.transition()
+      .duration(duration)
+      .style("height", (height  + 500)+ "px")
+      .attr("height", height);
+
+  svg2.select(self.frameElement).transition()
+      .duration(duration)
+      .style("height", (height  + 500)+ "px");
+*/
+
+  // Compute the "layout".
+  nodes.forEach(function(n, i) {
+    n.x = i * barHeight;
+  });
+
+  // Update the nodes…
+  var node = svg2.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+      .style("opacity", 1e-6);
+
+  var row_width = 0;
+
+  // Enter any new nodes at the parent's previous position.
+  //nodeEnter.append("rect")
+  nodeEnter.selectAll("rect")
+      .data(function (d) { return ("tasks" in d) ? d.tasks : JSON.parse('[{"a":1}]'); })
+      .enter().append("rect")
+      .attr("x", function (d,i) {
+        if ("uuid" in d)
+        {
+          if (i == 0) { row_width = 0; } // new row
+
+          var width         = (d.time / max_proc) * barWidth;
+          var old_row_width = row_width;
+          row_width         += width;
+          return old_row_width;
+        }
+        else
+        {
+          return 0;
+        }
+       })
+      .on("mouseover", function (d)
+      {
+        if ("uuid" in d) 
+        {
+          document.getElementById("metadata-div").style.left = mouse_x + "px";
+          document.getElementById("metadata-div").style.top = mouse_y + "px";
+          document.getElementById("metadata-div").style.display = "block";
+          document.getElementById("uuid").innerHTML = d.uuid;
+          document.getElementById("time").innerHTML = d.time;
+          document.getElementById("type").innerHTML = d.type;
+        }
+      }
+      )
+      .on("mouseout", function (d)
+      {
+        document.getElementById("metadata-div").style.display = "none";
+      }
+      )
+      .attr("y", -barHeight / 2)
+      .attr("height", barHeight)
+      .attr("width", function (d) { return ("uuid" in d) ? (d.time / max_proc) * barWidth : barWidth;})
+      .style("fill", color)
+      .on("click", click );
+
+  nodeEnter.append("text")
+      .attr("dy", 3.5)
+      .attr("dx", 5.5)
+      .text(function(d) { return ("uuid" in d) ? d.uuid : d.name; });
+
+
+  // Transition nodes to their new position.
+  nodeEnter.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .style("opacity", 1);
+
+  node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .style("opacity", 1)
+    .select("rect")
+      .style("fill", color);
+
+  // Transition exiting nodes to the parent's new position.
+  node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .style("opacity", 1e-6)
+      .remove();
+
+  // Update the links…
+  var link = svg2.selectAll("path.link")
+      .data(tree.links(nodes), function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      })
+    .transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+}
+
+// Toggle children on click.
+function click(d) {
+
+  if ("uuid" in d)
+  {
+    click_task(d);
+    return;
+  }
+
+  if ("children" in d) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  update(d);
+}
+
+function click_task(d){
+  console.log("UUID: " + d.uuid + ", PROC_TIME:" + d.time + ", TYPE:" + d.type);
+}
+
+function color(d) {
+  var c = d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
+
+        if ("uuid" in d)
+        {
+           if (d.type == "proc") { return  "orange"; }
+           if (d.type == "wait") { return  "#F2F238"; }
+           if (d.type == "idle") { return  "#F23841"; }
+        }
+        else 
+        {
+          if(c == "#fd8d3c") { return "#F2F238"; }
+          return c;
+        }
+}
+
+</script>

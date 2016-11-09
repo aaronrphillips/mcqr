@@ -1,0 +1,202 @@
+WORKER: node004:   Finished constructing Worker
+WORKER: node004:   Start()
+WORKER: node004:  node004-0, connecting to CONTROLLER REQ
+WORKER: node004:  node004-0, connected to CONTROLLER REQ
+WORKER: node004:  node004-0, connecting to CONTROLLER PUSH
+WORKER: node004:  node004-0, connected to CONTROLLER PUSH
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:2: 0.865312 seconds
+WORKER: node004:  UUID:2 Task:date ; sleep 3
+WORKER: Completed task: UUID: 2
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 3 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 1 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 12 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:4: 0.0597235 seconds
+WORKER: node004:  UUID:4 Task:ls ; sleep 5
+WORKER: Completed task: UUID: 4
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 1 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 12 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:7: 0.260502 seconds
+WORKER: node004:  UUID:7 Task:date ; sleep 8
+WORKER: Completed task: UUID: 7
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 8 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:10: 0.273024 seconds
+WORKER: node004:  UUID:10 Task:ls -alFs ; sleep 3
+WORKER: Completed task: UUID: 10
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 9 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 10 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:13: 0.2983 seconds
+WORKER: node004:  UUID:13 Task:pwd ; sleep 6
+WORKER: Completed task: UUID: 13
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 14 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:16: 0.310255 seconds
+WORKER: node004:  UUID:16 Task:echo "*******hello!**********" ; sleep 9
+WORKER: Completed task: UUID: 16
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 0 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 13 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:19: 0.324562 seconds
+WORKER: node004:  UUID:19 Task:ls ; sleep 5
+WORKER: Completed task: UUID: 19
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 4 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 13 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:23: 0.342727 seconds
+WORKER: node004:  UUID:23 Task:pwd ; sleep 9
+WORKER: Completed task: UUID: 23
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 13 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:26: 0.352997 seconds
+WORKER: node004:  UUID:26 Task:echo "*******hello!**********" ; sleep 4
+WORKER: Completed task: UUID: 26
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 10 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 13 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:29: 0.367965 seconds
+WORKER: node004:  UUID:29 Task:ls ; sleep 7
+WORKER: Completed task: UUID: 29
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 5 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 10 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:33: 0.38453 seconds
+WORKER: node004:  UUID:33 Task:pwd ; sleep 3
+WORKER: Completed task: UUID: 33
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 2 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 13 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:36: 0.396581 seconds
+WORKER: node004:  UUID:36 Task:echo "*******hello!**********" ; sleep 6
+WORKER: Completed task: UUID: 36
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 6 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received WAIT from CONTROLLER: 8 seconds
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0:2:39: 0.409291 seconds
+WORKER: node004:  UUID:39 Task:ls ; sleep 9
+WORKER: Completed task: UUID: 39
+WORKER: sending 'done' message
+WORKER: sent 'done' message
+WORKER: node004:  node004-0, requesting seq from controller
+WORKER: node004:  node004-0, waiting for REP seq from controller
+WORKER: node004:  node004-0, received REP seq from controller
+WORKER: node004:  node004-0: Received KILL from CONTROLLER

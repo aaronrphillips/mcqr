@@ -1,0 +1,136 @@
+
+This document describes the generic installation procedure for Mcqueuer.
+
+Before starting the build/install procedure we recommend you read all
+the installation instructions before you proceed. You may need root
+or sudo privileges to install the prerequisites and/or the Mcqueuer software.
+
+
+The installation procedure:
+  1. Prerequisites
+  2. Download Mcqueuer
+  3. Configure
+  4. Build
+  5. Install
+
+
+1. Prerequisites:
+
+   a. SSH access, using public keys, to any nodes that mcqr will be connecting
+      to during execution. Note that it is possible to run mcqr only on one node
+      if this is not an option
+
+   b. C++ compiler
+
+     This software requires a c++11-compliant compiler (tested with gcc-4.8.2)
+
+  a. zeromq (http://download.zeromq.org/)
+
+     This software has been tested with zeromq 4.0.3. You must install 
+     this version or newer in order to run Mcqueuer.
+
+       wget http://download.zeromq.org/zeromq-4.0.3.tar.gz
+       cd zeromq-4.0.3/
+       ./configure --prefix=[path to zeromq install]
+       make 
+       make install
+
+     Make sure that zeromq libraries are in your LD_LIBRARY_PATH:
+
+       LD_LIBRARY_PATH=[path to zeromq install]/lib:$LD_LIBRARY_PATH
+       export LD_LIBRARY_PATH
+
+  c. zeromq C++ bindings (https://github.com/zeromq/cppzmq)
+
+     This software has been tested with the cppzmq bindings, as of commit 
+     6c17af2.
+
+      wget https://github.com/zeromq/cppzmq/archive/6c17af22b72c860c30adbfa9cd68a701ba9aeb4f.zip -O cppzmq.zip
+      unzip cppzmq.zip
+      mv cppzmq-* [path to cppzmq install]
+
+  d. SIGAR library (support.hyperic.com)
+
+     This software has been tested with version 1.6.4.
+
+      wget https://sourceforge.net/projects/sigar/files/sigar/1.6/hyperic-sigar-1.6.4.zip/download -O sigar.zip
+      unzip sigar.zip
+      mv hyperic-sigar-1.6.4 [path to sigar install]
+
+     Make sure that sigar libraries are in your LD_LIBRARY_PATH:
+
+       LD_LIBRARY_PATH=[path to sigar install]/sigar-bin/lib:$LD_LIBRARY_PATH
+       export LD_LIBRARY_PATH
+
+
+2. Download Mcqueuer
+
+   More than likely you have already done this to read this file or
+   you are reading it online.
+
+   a. Assuming the file you downloaded is called mcqr-M_m_u.tar.gz
+      where M_m_u is the Major, minor, and micro version of the software.
+      tar zxf mcqr-M_m_u.tar.gz
+      cd mcqr-M_m_u
+
+
+3. Configure:
+
+   b. You must have the path to where the zeromq headers and libraries are
+      installed
+
+   c. Type the command:
+      ./configure --with-zeromq=[path to zeromq install] --with-sigar=[path to sigar install] --with-cppzmq=[path to cppzmq install]
+
+      NOTE: If you do not supply the --prefix option, the Mcqueuer binary
+            will try to install itself in /usr/local/bin
+
+   d. If everything is correct you should not get any errors. If you get
+      output that has errors, then you more than likely do not have
+      zeromq installed correctly or are trying this on a different platform 
+      that has not been tested.  If the problem is a new platform and you 
+      get it to work, please send your fix to the AUTHORS.
+
+
+4. Build
+
+   a. Type the command:
+      make
+      NOTE: If you have multiple cores and GNU make, you can type:
+      make -j N
+      where N is the number of cores you have.
+
+   b. If everything is correct you should not get any errors. If you get
+      output that has errors, then you more than likely trying this on a
+      different platform that has not been tested. If the problem is a
+      new platform and you get it to work, please send your fix to the
+      AUTHORS.
+
+   c. Finally, you must add an included library to your LD_LIBRARY_PATH
+      in order to run. Do the following (replace $MCQR_HOME with the
+      path to the directory where you extracted Mcqueuer):
+
+          LD_LIBRARY_PATH=[path to zeromq install]/lib/:$LD_LIBRARY_PATH
+          LD_LIBRARY_PATH=[path to sigar install]/sigar-bin/lib:$LD_LIBRARY_PATH
+          export LD_LIBRARY_PATH
+
+
+5. Install
+
+   a. Type the command:
+      make install
+
+      NOTE: This will install the mcqr binary in /usr/local/bin or 
+            the directory you specified with the --prefix option when
+            you ran the ./configure command in step 3 above.
+
+   b. If you get output errors, they are probably because you do not have
+      permissions to install the software.
+
+  c. Finally, you will need to ensure that all LD_LIBRARY_PATH modifications
+     described above are performed at login on any nodes that mcqr will be
+     connecting to during execution.
+
+If you make it to this point, then you have successfully installed the
+Mcqueuer software and are ready to start exploring your own data sets.
+

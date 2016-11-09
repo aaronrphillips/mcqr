@@ -1,0 +1,28 @@
+1.0.0
+-----
+- deslurmified!
+- doesn't require srun to run (starts all nodes via SSH)
+
+0.1.2 (svn revision 22-26)
+-----
+- include zmq.hpp and zhelpers.hpp
+- Fixed bug in communication layer
+- Fixed potential bug in message wrapper when 0-length strings are found
+- make sure at least 1 worker thread is started in non-clustered mode
+
+0.1.1 (svn revision 18-21)
+-----
+- Fixed bug that kept mcqueuer from working when run on only 1 node of a cluster (but still on multiple cores via slurm)
+- Return status is now printed to stdout (if verbose=1) for each task
+- Added argument for tmp dir (for getting return status)
+- In viz, full node names are now printed, instead of trying to extract #'s from the node names
+
+0.1.0 (svn revision 15-17)
+-----
+- added visualization capability
+- fixed bug in task file reading
+- shorted default wait time between tasks
+
+0.0.1 (svn revision 0-15)
+-----
+initial release
